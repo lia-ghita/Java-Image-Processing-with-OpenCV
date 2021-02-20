@@ -1,0 +1,59 @@
+*{
+    -primaryColor : #17212c;
+    -secondaryColor: rgb(36, 64, 93);
+    -textColor : white;
+
+}
+
+#mainPane{
+    -fx-pref-height: 500px;
+    -fx-pref-width: 800px;
+    -fx-background-color: -primaryColor;
+}
+#mainPane2{
+    -fx-pref-height: 600px;
+    -fx-pref-width: 850px;
+    -fx-background-color: -primaryColor;
+}
+
+.jfx-text-field .input-focused-line,.jfx-text-field .input-line{
+    -fx-pref-height: 0px;
+    -fx-opacity: 0;
+}
+.jfx-text-area .input-focused-line,.jfx-text-area .input-line{
+    -fx-pref-height: 0px;
+    -fx-opacity: 0;
+}
+
+.jfx-button{
+    -fx-background-color: #12bca0;
+    -fx-text-fill: #000000
+}
+.jfx-text-area{
+    -fx-background-color: -secondaryColor;
+    -fx-text-fill : white;
+}
+#startSymbol,#productionSeparator,#emptyCharacter{
+    -jfx-focus-color : white;
+    -fx-prompt-text-fill: #b5b3b3;
+    -fx-text-fill: -textColor;
+    -fx-font-size: 14;
+    -fx-padding: 0.333333em 1em 0.333333em 1em;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-background-color: rgb(49, 52, 55)
+}
+#uploadGrammar{
+    -fx-text-fill:white;
+}
+
+#backButton{
+    -fx-background-radius:100px;
+    -fx-background-color: #9b4726;
+    -fx-text-fill: white;
+}
+#backButton:hover{
+    -fx-background-radius:100px;
+    -fx-background-color: #de8d72;
+}
+
