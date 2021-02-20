@@ -8,7 +8,7 @@ import org.opencv.objdetect.CascadeClassifier;
 
 public class FaceDetection {
     static{System.loadLibrary(Core.NATIVE_LIBRARY_NAME);}
-        public static void main(String[] args) {
+        public FaceDetection(String imgAddress) {
             System.out.println("Done");
 
 

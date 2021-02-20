@@ -40,7 +40,7 @@ public class Start extends Application {
 
 
         uiController.uploadFileButton.setOnAction(event->{
-            File f =  uiController.UploadGrammar(primaryStage);
+            File f =  uiController.UploadImage(primaryStage);
             if (f!=null){
                 loadFile(f);
             }
@@ -72,6 +72,13 @@ public class Start extends Application {
             event.consume();
             uiController.dragPopUp.toBack();
         });
+
+        uiController.faceDetection.setOnAction(event->{
+         Image f=  uiController.FaceDetection();
+          uiController.image.setImage(f);
+        });
+
+
         firstScene.setOnDragEntered(dragEvent -> {
             if(dragEvent.getDragboard().hasFiles()){
                 uiController.fileDropArea.setEffect(new BoxBlur());
@@ -90,7 +97,7 @@ public class Start extends Application {
     }
 
     public void loadFile(File f){
-        uiController.uploadFile.setText(f.getName());
+        uiController.uploadFile.setText(f.getPath());
         File file = f;
         Image image = new Image(file.toURI().toString());
         uiController.image.setImage(image);
