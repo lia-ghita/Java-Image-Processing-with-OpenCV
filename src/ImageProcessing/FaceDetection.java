@@ -12,7 +12,7 @@ public class FaceDetection {
             System.out.println("Done");
 
 
-            String imgFile = "images/people.jpg";
+            String imgFile = imgAddress;
             Mat src = Imgcodecs.imread(imgFile);
             String xmlFile = "xml/lbpcascade_frontalface.xml";
             CascadeClassifier cc= new CascadeClassifier(xmlFile)  ;

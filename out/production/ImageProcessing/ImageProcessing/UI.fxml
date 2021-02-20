@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="880.0" stylesheets="@ui.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageProcessing.UiController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="845.0" stylesheets="@ui.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageProcessing.UiController">
    <children>
-      <ImageView fx:id="image" fitHeight="416.0" fitWidth="605.0" layoutX="56.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image" fitHeight="416.0" fitWidth="595.0" layoutX="56.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
       <JFXTextArea fx:id="fileDropArea" layoutX="248.0" layoutY="266.0" prefHeight="88.0" prefWidth="221.0">
          <opaqueInsets>
             <Insets bottom="1.0" left="1.0" right="1.0" top="3.0" />
@@ -24,7 +24,9 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton fx:id="uploadFileButton" buttonType="RAISED" layoutX="597.0" layoutY="29.0" prefHeight="25.0" prefWidth="67.0" text="Upload" textFill="#fffdfd" />
-      <JFXTextField fx:id="uploadFile" layoutX="463.0" layoutY="28.0" prefHeight="25.0" prefWidth="116.0" />
+      <JFXButton fx:id="uploadFileButton" buttonType="RAISED" layoutX="582.0" layoutY="29.0" prefHeight="25.0" prefWidth="71.0" text="Upload" textFill="#fffdfd" />
+      <JFXButton fx:id="faceDetection" buttonType="RAISED" layoutX="655.0" layoutY="111.0" prefHeight="25.0" prefWidth="133.0" text="Face detection" textFill="#fffdfd" />
+      <JFXTextField fx:id="uploadFile" layoutX="455.0" layoutY="30.0" prefHeight="25.0" prefWidth="116.0" />
+      <JFXButton fx:id="faceDetection1" buttonType="RAISED" layoutX="655.0" layoutY="155.0" prefHeight="25.0" prefWidth="133.0" text="Advanced processing" textFill="#fffdfd" />
    </children>
 </AnchorPane>
