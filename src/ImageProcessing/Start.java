@@ -9,13 +9,8 @@ import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import javafx.stage.Stage;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Start extends Application {
 
@@ -47,7 +42,7 @@ public class Start extends Application {
         uiController.uploadFileButton.setOnAction(event->{
             File f =  uiController.UploadGrammar(primaryStage);
             if (f!=null){
-                loadGrammar(f);
+                loadFile(f);
             }
         });
 
@@ -58,19 +53,19 @@ public class Start extends Application {
             editorController.TheLegendText.clear();
         });
 
-        uiController.grammarRules.setOnDragOver(dragEvent -> {
+        uiController.fileDropArea.setOnDragOver(dragEvent -> {
             if(dragEvent.getDragboard().hasFiles()){
                 uiController.dragPopUp.toFront();
                 dragEvent.acceptTransferModes(TransferMode.ANY);
             }
         });
 
-        uiController.grammarRules.setOnDragDropped(event->{
+        uiController.fileDropArea.setOnDragDropped(event->{
             boolean success = false;
             Dragboard db = event.getDragboard();
             if(db.hasFiles()){
                 File file = db.getFiles().get(0);
-                loadGrammar(file);
+                loadFile(file);
                 success = true;
             }
             event.setDropCompleted(success);
@@ -79,20 +74,22 @@ public class Start extends Application {
         });
         firstScene.setOnDragEntered(dragEvent -> {
             if(dragEvent.getDragboard().hasFiles()){
-                uiController.grammarRules.setEffect(new BoxBlur());
+                uiController.fileDropArea.setEffect(new BoxBlur());
                 uiController.dragPopUp.toFront();
                 dragEvent.acceptTransferModes(TransferMode.ANY);
             }
         });
         firstScene.setOnDragExited(dragEvent ->{
             if(dragEvent.getDragboard().hasFiles()){
-                uiController.grammarRules.setEffect(null);
+                uiController.fileDropArea.setEffect(null);
                 uiController.dragPopUp.toBack();
+                uiController.fileDropArea.toBack();
+                uiController.image.toFront();
             }
         } );
     }
 
-    public void loadGrammar(File f){
+    public void loadFile(File f){
         uiController.uploadFile.setText(f.getName());
         File file = f;
         Image image = new Image(file.toURI().toString());

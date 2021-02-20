@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.File;
 
 public class UiController {
-    public JFXTextArea grammarRules;
+    public JFXTextArea fileDropArea;
     public JFXTextField uploadFile;
     public Label dragPopUp;
     public JFXButton uploadFileButton;

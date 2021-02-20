@@ -8,15 +8,20 @@
 
 <AnchorPane fx:id="mainPane2" stylesheets="@ui.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageProcessing.EditorController">
    <children>
-      <Label layoutX="348.0" layoutY="17.0" text="Image processing" textFill="#f5f3f3">
+      <Label layoutX="321.0" layoutY="17.0" prefHeight="31.0" prefWidth="191.0" text="Image processing" textFill="#f5f3f3">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <JFXButton fx:id="ApplyMarkov" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="705.0" layoutY="542.0" stylesheets="@ui.css" text="Apply Markov" />
+      <JFXButton fx:id="ApplyMarkov" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="705.0" layoutY="503.0" stylesheets="@ui.css" text="Apply Markov" />
       <JFXButton fx:id="backButton" buttonType="RAISED" layoutX="795.0" layoutY="20.0" text="Back" textFill="WHITE" />
-      <ImageView fitHeight="273.0" fitWidth="400.0" layoutX="436.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="327.0" fitWidth="400.0" layoutX="25.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="54.0" fitWidth="183.0" layoutX="436.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="251.0" fitWidth="372.0" layoutX="25.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/people.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="254.0" fitWidth="372.0" layoutX="405.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/people.jpg" />
          </image>
