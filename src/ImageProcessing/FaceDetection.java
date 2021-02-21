@@ -6,6 +6,7 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 
 
+
 public class FaceDetection {
     static{System.loadLibrary(Core.NATIVE_LIBRARY_NAME);}
         public FaceDetection(String imgAddress) {
@@ -30,7 +31,6 @@ public class FaceDetection {
             }
         }
     }
-
 
 
 

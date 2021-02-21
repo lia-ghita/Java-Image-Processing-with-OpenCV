@@ -78,6 +78,11 @@ public class Start extends Application {
           uiController.image.setImage(f);
         });
 
+        uiController.gaussianBlur.setOnAction(event->{
+            Image f=  uiController.GaussianBlur();
+            uiController.image.setImage(f);
+        });
+
 
         firstScene.setOnDragEntered(dragEvent -> {
             if(dragEvent.getDragboard().hasFiles()){

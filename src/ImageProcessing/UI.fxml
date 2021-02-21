@@ -27,6 +27,6 @@
       <JFXButton fx:id="uploadFileButton" buttonType="RAISED" layoutX="582.0" layoutY="29.0" prefHeight="25.0" prefWidth="71.0" text="Upload" textFill="#fffdfd" />
       <JFXButton fx:id="faceDetection" buttonType="RAISED" layoutX="655.0" layoutY="111.0" prefHeight="25.0" prefWidth="133.0" text="Face detection" textFill="#fffdfd" />
       <JFXTextField fx:id="uploadFile" layoutX="244.0" layoutY="30.0" prefHeight="25.0" prefWidth="327.0" />
-      <JFXButton fx:id="faceDetection1" buttonType="RAISED" layoutX="655.0" layoutY="155.0" prefHeight="25.0" prefWidth="133.0" text="Advanced processing" textFill="#fffdfd" />
+      <JFXButton fx:id="gaussianBlur" buttonType="RAISED" layoutX="655.0" layoutY="155.0" prefHeight="25.0" prefWidth="133.0" text="Gaussian blur" textFill="#fffdfd" />
    </children>
 </AnchorPane>

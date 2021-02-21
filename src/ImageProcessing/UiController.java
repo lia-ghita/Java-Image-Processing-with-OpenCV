@@ -17,6 +17,7 @@ public class UiController {
     public JFXButton uploadFileButton;
     public JFXButton faceDetection;
     public ImageView image;
+    public JFXButton gaussianBlur;
 
 
     public Image FaceDetection (){
@@ -24,6 +25,15 @@ public class UiController {
         FaceDetection fd= new FaceDetection(filePath);
 
         File file = new File("images/peopleout.jpg");
+        Image image = new Image(file.toURI().toString());
+        return image;
+    }
+
+    public Image GaussianBlur (){
+        String filePath = uploadFile.getText();
+        GaussianBlur fd= new GaussianBlur(filePath);
+
+        File file = new File("images/gaussianBlurLatest.jpg");
         Image image = new Image(file.toURI().toString());
         return image;
     }
