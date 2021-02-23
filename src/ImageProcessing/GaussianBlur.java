@@ -8,9 +8,6 @@ import org.opencv.imgproc.Imgproc;
 public class GaussianBlur {
     static{System.loadLibrary(Core.NATIVE_LIBRARY_NAME);}
     public GaussianBlur(String imgAddress) {
-        System.out.println("Done");
-
-
         String imgFile = imgAddress;
         Mat src = Imgcodecs.imread(imgFile);
         Mat destination = new Mat(src.rows(), src.cols(), src.type());
