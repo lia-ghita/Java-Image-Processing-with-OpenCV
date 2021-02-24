@@ -20,7 +20,7 @@ public class FaceDetection {
 
             MatOfRect faceDetection = new MatOfRect();
             cc.detectMultiScale (src, faceDetection);
-            System.out.println(String.format("Detected faces: %d", faceDetection.toArray().length));
+
 
             for (Rect rect: faceDetection.toArray()){
                 Imgproc.rectangle(src, new Point(rect.x, rect.y), new Point(rect.x+ rect.width, rect.y+rect.height), new Scalar(0,0,255), 3);

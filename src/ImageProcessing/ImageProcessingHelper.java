@@ -29,21 +29,18 @@ public class ImageProcessingHelper {
             }
         };
 
-
         return kernel;
-
     }
 
-    public static Image ApplyEdgeDetection(Image image, Mat kernel) {
-System.out.println(image.getUrl());
-        Mat source = Imgcodecs.imread("images/lena_color_256.bmp", Imgcodecs.IMREAD_GRAYSCALE);
+    public static Image ApplyEdgeDetection(String imageName, Mat kernel) {
+        Mat source = Imgcodecs.imread(imageName, Imgcodecs.IMREAD_GRAYSCALE);
         Mat destination = new Mat(source.rows(),source.cols(),source.type());
         Imgproc.filter2D(source,destination, -1, kernel);
-        Imgcodecs.imwrite("images/prewitt.jpg",destination);
-        File file = new File("images/prewitt.jpg");
+        Imgcodecs.imwrite("images/edgeDetectionProcessed.jpg",destination);
+        File file = new File("images/edgeDetectionProcessed.jpg");
         Image processedImage = new Image(file.toURI().toString());
 
-return processedImage;
+       return processedImage;
 
     }
 

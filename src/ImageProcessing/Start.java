@@ -55,10 +55,9 @@ public class Start extends Application {
         List<List<Double>> data = (List<List<Double>>) entry.get("data");
 
         Mat kernel = ImageProcessingHelper.createKernel(data);
-        Image processedImage = ApplyEdgeDetection(editorController.sourceImage.getImage(),kernel);
+        Image processedImage = ApplyEdgeDetection(uiController.uploadFile.getText(),kernel);
 
         editorController.processedImage.setImage(processedImage);
-
     }
 
     private void iniEvents(){
@@ -89,38 +88,30 @@ public class Start extends Application {
 
         try {
             Gson gson = new Gson();
-
             algorithms = gson.fromJson(new FileReader(new File("./Algorithms.json")), List.class);
-
-
             for (Map entry :  algorithms) {
                 editorController.methodCombo.getItems().add(entry.get("name"));
             }
-
-
             editorController.methodCombo.setOnAction(actionEvent -> {
-
                 System.out.println("   >>> " + editorController.methodCombo.getSelectionModel().getSelectedIndex());
-
             });
         }catch (Exception e) {
             e.printStackTrace();
         }
-
         editorController.applyBtn.setOnAction(actionEvent -> {
             applyAlgorithm(editorController.methodCombo.getSelectionModel().getSelectedIndex());
         });
 
 
 
-        uiController.fileDropArea.setOnDragOver(dragEvent -> {
+        firstScene.setOnDragOver(dragEvent -> {
             if(dragEvent.getDragboard().hasFiles()){
                 uiController.dragPopUp.toFront();
                 dragEvent.acceptTransferModes(TransferMode.ANY);
             }
         });
 
-        uiController.fileDropArea.setOnDragDropped(event->{
+        firstScene.setOnDragDropped(event->{
             boolean success = false;
             Dragboard db = event.getDragboard();
             if(db.hasFiles()){
@@ -144,21 +135,21 @@ public class Start extends Application {
         });
 
 
-        firstScene.setOnDragEntered(dragEvent -> {
-            if(dragEvent.getDragboard().hasFiles()){
-                uiController.fileDropArea.setEffect(new BoxBlur());
-                uiController.dragPopUp.toFront();
-                dragEvent.acceptTransferModes(TransferMode.ANY);
-            }
-        });
-        firstScene.setOnDragExited(dragEvent ->{
-            if(dragEvent.getDragboard().hasFiles()){
-                uiController.fileDropArea.setEffect(null);
-                uiController.dragPopUp.toBack();
-                uiController.fileDropArea.toBack();
-                uiController.image.toFront();
-            }
-        } );
+//        firstScene.setOnDragEntered(dragEvent -> {
+//            if(dragEvent.getDragboard().hasFiles()){
+//                uiController.fileDropArea.setEffect(new BoxBlur());
+//                uiController.dragPopUp.toFront();
+//                dragEvent.acceptTransferModes(TransferMode.ANY);
+//            }
+//        });
+//        firstScene.setOnDragExited(dragEvent ->{
+//            if(dragEvent.getDragboard().hasFiles()){
+//                uiController.fileDropArea.setEffect(null);
+//                uiController.dragPopUp.toBack();
+//                uiController.fileDropArea.toBack();
+//                uiController.image.toFront();
+//            }
+//        } );
     }
 
     public void loadFile(File f){
