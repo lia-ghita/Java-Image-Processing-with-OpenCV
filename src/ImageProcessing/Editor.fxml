@@ -13,14 +13,13 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <JFXButton fx:id="ApplyMarkov" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="705.0" layoutY="503.0" stylesheets="@ui.css" text="Apply Markov" />
       <JFXButton fx:id="backButton" buttonType="RAISED" layoutX="795.0" layoutY="20.0" text="Back" textFill="WHITE" />
       <ImageView fitHeight="54.0" fitWidth="183.0" layoutX="436.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="sourceImage" fitHeight="251.0" fitWidth="372.0" layoutX="25.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
       </ImageView>
       <ImageView fx:id="processedImage" fitHeight="254.0" fitWidth="372.0" layoutX="405.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
       </ImageView>
-      <ComboBox fx:id="methodCombo" layoutX="43.0" layoutY="378.0" prefHeight="25.0" prefWidth="215.0" />
-      <Button fx:id="applyBtn" layoutX="272.0" layoutY="378.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Button" />
+      <ComboBox fx:id="methodCombo" layoutX="43.0" layoutY="378.0" prefHeight="25.0" prefWidth="233.0" stylesheets="@ui.css" />
+      <Button fx:id="applyBtn" layoutX="299.0" layoutY="378.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" stylesheets="@ui.css" text="Apply" />
    </children>
 </AnchorPane>
