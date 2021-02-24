@@ -18,4 +18,5 @@ public class EditorController {
     public ComboBox methodCombo;
     public JFXButton backButton;
     public ImageView sourceImage;
+    public ImageView processedImage;
 }

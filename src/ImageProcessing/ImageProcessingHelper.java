@@ -1,9 +1,14 @@
 package ImageProcessing;
 
+import javafx.scene.image.Image;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.imgproc.Imgproc;
 
+import java.awt.*;
+import java.io.File;
 import java.util.List;
 
 public class ImageProcessingHelper {
@@ -12,17 +17,6 @@ public class ImageProcessingHelper {
     public static Mat createKernel(List<List<Double>> data) {
         Mat kernel = new Mat(3, 3, CvType.CV_32F) {
             {
-             /* put(0,0,-1);
-                put(0,1,0);
-                put(0,2,1);
-
-                put(1,0,-1);
-                put(1,1,0);
-                put(1,2,1);
-
-                put(2,0,-1);
-                put(2,1,0);
-                put(2,2,1);*/
 
                 for (int r = 0; r < 3 ; r++) {
                     List<Double> row = data.get(r);
@@ -32,9 +26,6 @@ public class ImageProcessingHelper {
 
                 }
 
-//               for (List<Double> row : data) {
-//                    put(row.get(0).intValue(), row.get(1).intValue(), row.get(2).intValue());
-//                }
             }
         };
 
@@ -42,5 +33,19 @@ public class ImageProcessingHelper {
         return kernel;
 
     }
+
+    public static Image ApplyEdgeDetection(Image image, Mat kernel) {
+System.out.println(image.getUrl());
+        Mat source = Imgcodecs.imread("images/lena_color_256.bmp", Imgcodecs.IMREAD_GRAYSCALE);
+        Mat destination = new Mat(source.rows(),source.cols(),source.type());
+        Imgproc.filter2D(source,destination, -1, kernel);
+        Imgcodecs.imwrite("images/prewitt.jpg",destination);
+        File file = new File("images/prewitt.jpg");
+        Image processedImage = new Image(file.toURI().toString());
+
+return processedImage;
+
+    }
+
 
 }

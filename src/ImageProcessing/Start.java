@@ -19,6 +19,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import static ImageProcessing.ImageProcessingHelper.ApplyEdgeDetection;
+
 
 public class Start extends Application {
 
@@ -53,10 +55,9 @@ public class Start extends Application {
         List<List<Double>> data = (List<List<Double>>) entry.get("data");
 
         Mat kernel = ImageProcessingHelper.createKernel(data);
+        Image processedImage = ApplyEdgeDetection(editorController.sourceImage.getImage(),kernel);
 
-        System.out.println("kernel " + kernel);
-
-        System.out.println(data.get(0).get(0));
+        editorController.processedImage.setImage(processedImage);
 
     }
 

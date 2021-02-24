@@ -18,7 +18,7 @@
       <ImageView fitHeight="54.0" fitWidth="183.0" layoutX="436.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="sourceImage" fitHeight="251.0" fitWidth="372.0" layoutX="25.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
       </ImageView>
-      <ImageView fitHeight="254.0" fitWidth="372.0" layoutX="405.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="processedImage" fitHeight="254.0" fitWidth="372.0" layoutX="405.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
       </ImageView>
       <ComboBox fx:id="methodCombo" layoutX="43.0" layoutY="378.0" prefHeight="25.0" prefWidth="215.0" />
       <Button fx:id="applyBtn" layoutX="272.0" layoutY="378.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Button" />
