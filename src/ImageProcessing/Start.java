@@ -83,7 +83,8 @@ public class Start extends Application {
 
         editorController.backButton.setOnAction(event ->{
             primaryStage.setScene(firstScene);
-            editorController.TheLegendText.clear();
+            editorController.sourceImage.setImage(null);
+            editorController.processedImage.setImage(null);
         });
 
         try {
