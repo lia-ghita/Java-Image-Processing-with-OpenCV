@@ -16,15 +16,11 @@
       <JFXButton fx:id="ApplyMarkov" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="705.0" layoutY="503.0" stylesheets="@ui.css" text="Apply Markov" />
       <JFXButton fx:id="backButton" buttonType="RAISED" layoutX="795.0" layoutY="20.0" text="Back" textFill="WHITE" />
       <ImageView fitHeight="54.0" fitWidth="183.0" layoutX="436.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="251.0" fitWidth="372.0" layoutX="25.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/people.jpg" />
-         </image>
+      <ImageView fx:id="sourceImage" fitHeight="251.0" fitWidth="372.0" layoutX="25.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
       </ImageView>
       <ImageView fitHeight="254.0" fitWidth="372.0" layoutX="405.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/people.jpg" />
-         </image>
       </ImageView>
+      <ComboBox fx:id="methodCombo" layoutX="43.0" layoutY="378.0" prefHeight="25.0" prefWidth="215.0" />
+      <Button fx:id="applyBtn" layoutX="272.0" layoutY="378.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Button" />
    </children>
 </AnchorPane>

@@ -18,6 +18,7 @@ public class UiController {
     public JFXButton faceDetection;
     public ImageView image;
     public JFXButton gaussianBlur;
+    public JFXButton edgeDetection;
 
 
     public Image FaceDetection (){
