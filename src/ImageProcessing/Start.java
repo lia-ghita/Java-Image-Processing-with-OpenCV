@@ -50,7 +50,7 @@ public class Start extends Application {
 
     private void applyAlgorithm(int i) {
         Map entry = algorithms.get(i);
-        List<List<Integer>> data = (List<List<Integer>>) entry.get("data");
+        List<List<Double>> data = (List<List<Double>>) entry.get("data");
 
         Mat kernel = ImageProcessingHelper.createKernel(data);
 
